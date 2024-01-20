@@ -1,4 +1,4 @@
-FROM python:3.8-slim
+FROM python:3.12-slim
 
 # Set the working directory
 WORKDIR /app
@@ -11,7 +11,7 @@ RUN pip install -r requirements.txt
 COPY . .
 
 # Run Django migrations
-RUN cd ./core && python manage.py makemigrations && python manage.py migrate
+RUN cd python manage.py makemigrations && python manage.py migrate
 
 # Expose the application's port
 EXPOSE 8000
