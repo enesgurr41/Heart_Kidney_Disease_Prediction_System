@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <link href="{% static 'css/style.css' %}" rel="stylesheet" />
-
+    <link href="{% static 'css/style3.css' %}" rel="stylesheet" />
     <link href="{% static 'css/now-ui-kit.css' %}" rel="stylesheet" />
     <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'><!--web font-->
     <title>Heart disease prediction</title>
@@ -12,17 +12,17 @@
 <body style="background-image: url('{% static 'images/2.jpg' %}')">
 	<!-- main -->
 	<div class="agileits-main">
-	<div class="w3top-nav">
+		<div class="w3top-nav">
 
 				<div class="w3top-nav-left">
-					<h1 style="color:white;">          Heart/Kidney Disease Prediction System</h1>
+					<h1 style="color:white;">Kalp Ve Böbrek Hastalığı Tahmin Sistemi</h1>
 				</div>
 
 				<div class="w3top-nav-right">
 					<ul>
 
-						<li><a href="{% url 'accounts:register' %}">Signup</a></li>
-						<li><a href="/admin">Admin login</a></li>
+						<li><a class="button" href="{% url 'accounts:register' %}">Üye Ol</a></li>
+						<li><a class="button" href="/admin">Yönetici Girişi</a></li>
 					</ul>
 				</div>
 
@@ -30,30 +30,30 @@
 
     <div class="header-main">
       {%if user.is_authenticated %}
-        <h2>You are already logged in !!</h2>
-        <button class="btn btn-neutral"><a href="{% url 'accounts:logout'%}">Logout</a></button>
+        <h2>Zaten giriş yaptınız !!</h2>
+        <button class="btn btn-neutral"><a href="{% url 'accounts:logout'%}">Çıkış Yap</a></button>
       {%else%}
-    <h2>Login Now</h2>
+    <h3>Giriş Yap</h3>
 			<div class="header-bottom">
 				<div class="header-right w3agile">
 					<div class="header-left-bottom agileinfo">
             <form role="form" action=" {% url 'user_login' %}" method="post">
             {% csrf_token %}
 							<div class="icon1">
-								<input type="text" name="username" placeholder="Username" >
+								<input type="text" name="username" placeholder="Kullanıcı Adı" >
 							</div>
 							<div class="icon1">
-								<input type="password"  name="password" placeholder="Password"/>
+								<input type="password"  name="password" placeholder="Şifre"/>
 							</div>
 				               <div class="icon1">
 								   <!--<select name="switch">-->
 									   <!--<option value="Heart">Heart</option>-->
 									   <!--<option value="Kidney">Kidney</option>-->
 								   <!--</select>-->
-								   <input type="text" name="switch" placeholder="Heart/Kidney">
+								   <input type="text" name="switch" placeholder="Kalp/Böbrek">
 							</div>
 							<div class="bottom">
-								<input type="submit" value="Log in">
+								<input type="submit" value="Giriş Yap">
 							</div>
 					</form>&nbsp;
 
