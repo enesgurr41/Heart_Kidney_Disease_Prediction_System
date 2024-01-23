@@ -86,11 +86,11 @@ def user_login(request):
                     return render(request, 'accounts/login.html', {})
 
             else:
-                return HttpResponse("Account not active")
+                return HttpResponse("Hesap aktif değil")
         else:
             print("Tried login and failed")
             print("username: {} and password: {}".format(username, password))
-            return HttpResponse("Invalid login details supplied!")
+            return HttpResponse("Geçersiz giriş bilgileri sağlandı!")
 
     else:
         return render(request, 'accounts/login.html', {})
