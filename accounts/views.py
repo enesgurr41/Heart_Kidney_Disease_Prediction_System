@@ -66,7 +66,7 @@ def user_login(request):
         username = request.POST.get('username')
         password = request.POST.get('password')
         switch = request.POST.get('switch')
-        if (switch)=="Heart":
+        if (switch)=="Kalp":
             flag=True
         else:
             flag=False
@@ -78,9 +78,9 @@ def user_login(request):
                 login(request, user)
                 request.session['user_id'] = user.profile.pk
 
-                if (switch) == 'Heart':
+                if (switch) == 'Kalp':
                     return HttpResponseRedirect(reverse('predict:predict', kwargs={'pk': user.profile.pk}))
-                elif (switch) == 'Kidney':
+                elif (switch) == 'Böbrek':
                     return HttpResponseRedirect(reverse('predict_1:predict_1', kwargs={'pk': user.profile.pk}))
                 else:
                     return render(request, 'accounts/login.html', {})
