@@ -27,9 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-JET_DEFAULT_THEME = 'default' 
-
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Application definition
@@ -41,10 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'colorfield',
-    'admin_interface',
+    'accounts',
     'predict_risk',
     'predict_risk_1',
+    'colorfield',
+    'admin_interface',
 ]
 
 MIDDLEWARE = [
