@@ -550,3 +550,13 @@ p.wickedpicker__title {
 	}
 }
 /*--responsive--*/
+
+.containerss {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.creditss {
+    text-align: center;
+}
