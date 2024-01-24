@@ -41,8 +41,6 @@ INSTALLED_APPS = [
     'accounts',
     'predict_risk',
     'predict_risk_1',
-    'colorfield',
-    'admin_interface',
 ]
 
 MIDDLEWARE = [
