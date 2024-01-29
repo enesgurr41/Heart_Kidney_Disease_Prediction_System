@@ -1,1 +1,3 @@
 # Health_Site_Front
+
+Bu projenin amacı, veri madenciliği teknikleri ve makine öğrenme algoritmalarını kullanarak kalp ve Böbrek hastalıklarını tahmin etmektir. Bu proje, scikit-learn kullanılarak 6 sınıflandırma modeli uygulanmıştır: Lojistik Regresyon, Naïve Bayes, Destek Vektör Sınıflandırıcı, KNN, Sinir Ağı ve Karar Ağacı Modeli. UCI veri deposundan ve Kaggle.com'dan elde edilen kalp ve böbrek hastalığı veri setleri üzerindeki performansları araştırılmıştır.
