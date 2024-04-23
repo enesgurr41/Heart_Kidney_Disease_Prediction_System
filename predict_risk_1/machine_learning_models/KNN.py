@@ -2,7 +2,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-import random
 
 # Importing the dataset
 dataset = pd.read_csv('kidney_disease2.csv')
@@ -10,13 +9,10 @@ dataset = pd.read_csv('kidney_disease2.csv')
 X = dataset.iloc[:,:-1].values
 y = dataset.iloc[:,24].values
 
-
 #handling missing data
-
-from sklearn.preprocessing import Imputer
-imputer = Imputer(missing_values = 'NaN', strategy = 'mean', axis = 0)
-imputer = imputer.fit(X[:,:24])
-X[:,:24] = imputer.transform(X[:,:24])
+from sklearn.impute import SimpleImputer
+imputer = SimpleImputer(missing_values = np.nan, strategy = 'mean')
+X[:,:24] = imputer.fit_transform(X[:,:24])
 
 # Splitting the dataset into the Training set and Test set
 from sklearn.model_selection import train_test_split
@@ -38,15 +34,14 @@ import seaborn as sn
 sn.countplot(x='classification',data=dataset)
 dataset.classification.value_counts()
 print("------",dataset.classification.value_counts(),"----------")
-# Fitting Decision Tree Classification to the Training set
+# Fitting K-Nearest Neighbors Classification to the Training set
 from sklearn.neighbors import KNeighborsClassifier
 classifier = KNeighborsClassifier(n_neighbors=3)
 classifier.fit(X_train, y_train)
 
-from sklearn.externals import joblib
+# Save the model
 filename ='KNN_model.pkl'
 joblib.dump(classifier,filename)
-
 
 # Predicting the Test set results
 print(X_test)
@@ -56,7 +51,7 @@ print(y_test)
 
 #ACCURACY SCORE
 from sklearn.metrics import accuracy_score
-accuracy_score(y_test,y_pred)
+print("Accuracy:", accuracy_score(y_test,y_pred))
 
 ##CONFUSION MATRIX
 from sklearn.metrics import classification_report, confusion_matrix
@@ -83,9 +78,7 @@ plt.legend(loc="lower right")
 plt.savefig('Log_ROC')
 plt.show()
 
-
 ##PREDICTION FOR NEW DATASET
-
 Newdataset = pd.read_csv('newdata.csv')
 sca=StandardScaler()
 train=sca.fit_transform(train)
