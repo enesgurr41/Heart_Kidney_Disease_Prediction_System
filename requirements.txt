@@ -1,7 +1,7 @@
 asgiref==3.2.3
 Django==3.2.25
 joblib==1.1.1
-pillow==8.4.0
+pillow==5.4.1
 sqlparse==0.4.4
 tzdata==2023.4
 scikit-learn==0.20.0
