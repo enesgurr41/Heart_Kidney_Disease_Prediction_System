@@ -86,3 +86,7 @@ plt.show()
 
 Newdataset = pd.read_csv('newdata.csv')
 ynew=classifier.predict(Newdataset)
+
+
+
+

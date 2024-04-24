@@ -11,10 +11,9 @@ config = {
         'scalar_file': 'production/standard_scalar.pkl',
         'deep_learning': 'production/deep_learning_model.pkl',
         'KNN': 'production/KNN_model.pkl',
-    
     }}
 
-dir = os.getcwd()+'/predict_risk/'
+dir = os.path.dirname(__file__)
 
 def GetJobLibFile(filepath):
     if os.path.isfile(os.path.join(dir, filepath)):
@@ -23,7 +22,7 @@ def GetJobLibFile(filepath):
 
 def GetPickleFile(filepath):
     if os.path.isfile(os.path.join(dir, filepath)):
-        return joblib.load(os.path.join(dir, filepath))
+        return pickle.load( open(os.path.join(dir, filepath), "rb" ) )
     return None
 
 def GetStandardScalarForHeart():
