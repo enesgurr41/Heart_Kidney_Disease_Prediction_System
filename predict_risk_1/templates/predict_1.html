@@ -42,6 +42,7 @@
 <div class="header-main">
 {% if result %}
 <h4 class="table-danger text-center">Böbrek hastalığı riskiniz var</h4>
+<a class="text-center" href="{% url 'accounts:diyet' %}"><h4>Yarrak</h4></a>
 {% else %}
 <h4 class="table-success  text-center">Böbrek hastalığı riskiniz yok</h4>
 {% endif %}

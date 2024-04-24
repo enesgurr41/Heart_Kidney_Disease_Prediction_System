@@ -19,7 +19,8 @@ def user_logout(request):
     logout(request)
     return HttpResponseRedirect(reverse('user_login'))
 
-
+def diyet(request):
+    return render(request, 'accounts/register.html')
 
 
 def register(request):

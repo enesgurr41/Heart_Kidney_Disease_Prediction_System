@@ -88,7 +88,6 @@ def PredictRisk_1(request,pk):
                 pred.classification=0
 
             pred.profile = profile
-
             pred.save()
             predicted = True
 

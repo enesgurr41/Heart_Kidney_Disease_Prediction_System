@@ -13,8 +13,13 @@ from django.contrib import messages
 def PredictRisk(request,pk):
     predicted = False
     predictions={}
+    result = False
+    colors = {}
+
     if request.session.has_key('user_id'):
         u_id = request.session['user_id']
+    else:
+        u_id = None
 
     if request.method == 'POST':
         form = Predict_Form(data=request.POST)
@@ -28,9 +33,8 @@ def PredictRisk(request,pk):
             print("Before------",features)
             standard_scalar = GetStandardScalarForHeart()
             features = standard_scalar.transform(features)
-            print("Hell0-------",features)
+            print("Hello-------",features)
             SVCClassifier,LogisticRegressionClassifier,NaiveBayesClassifier,DecisionTreeClassifier,NeuralNetworkClassifier,KNNClassifier=GetAllClassifiersForHeart()
-
 
             predictions = {'SVC': str(SVCClassifier.predict(features)[0]),
             'LogisticRegression': str(LogisticRegressionClassifier.predict(features)[0]),
@@ -44,8 +48,6 @@ def PredictRisk(request,pk):
             l=[predictions['SVC'],predictions['LogisticRegression'],predictions['NaiveBayes'],predictions['DecisionTree'],predictions['NeuralNetwork'],predictions['KNN']]
             count=l.count('1')
 
-            result=False
-
             if count>=3:
                 result=True
                 pred.num=1
@@ -53,11 +55,8 @@ def PredictRisk(request,pk):
                 pred.num=0
 
             pred.profile = profile
-
             pred.save()
             predicted = True
-
-            colors={}
 
             if predictions['SVC']=='0':
                 colors['SVC']="table-success"
@@ -89,9 +88,13 @@ def PredictRisk(request,pk):
             else:
                 colors['KNN']="table-danger"
 
+    # else:
+    #     form = Predict_Form()
+
+    
     if predicted:
         return render(request, 'predict.html',
-                      {'form': form,'predicted': predicted,'user_id':u_id,'predictions':predictions,'result':result,'colors':colors})
+                  {'form': form,'predicted': predicted,'user_id':u_id,'predictions':predictions,'result':result,'colors':colors})
 
     else:
         form = Predict_Form()
