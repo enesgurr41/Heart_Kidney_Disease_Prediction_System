@@ -2,6 +2,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
+from sklearn.preprocessing import StandardScaler
 
 # Importing the dataset
 dataset = pd.read_csv('kidney_disease2.csv')
@@ -19,14 +20,14 @@ from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.5, random_state =101)
 
 # Feature Scaling
-from sklearn.preprocessing import StandardScaler
 sc = StandardScaler()
 train=list(X_train)
 X_train = sc.fit_transform(X_train)
-from sklearn.externals import joblib
+
 # Save it
 scaler_file = "standard_scalar_KNN.pkl"
 joblib.dump(sc, scaler_file)
+
 X_test = sc.transform(X_test)
 
 #EXPLORING THE DATASET

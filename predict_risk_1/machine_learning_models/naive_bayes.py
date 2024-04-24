@@ -75,3 +75,4 @@ Newdataset = pd.read_csv('newdata.csv')
 Newdataset = sc.transform(Newdataset)
 y_new = classifier.predict(Newdataset)
 print("Predicted values for new dataset:", y_new)
+

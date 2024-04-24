@@ -23,17 +23,12 @@ from sklearn.preprocessing import StandardScaler
 sc = StandardScaler()
 train=list(X_train)
 X_train = sc.fit_transform(X_train)
-from sklearn.externals import joblib
+
 # Save it
 scaler_file = "standard_scalar_decision.pkl"
 joblib.dump(sc, scaler_file)
 X_test = sc.transform(X_test)
 
-#EXPLORING THE DATASET
-import seaborn as sn
-sn.countplot(x='classification',data=dataset)
-dataset.classification.value_counts()
-print("------",dataset.classification.value_counts(),"----------")
 # Fitting Decision Tree Classification to the Training set
 from sklearn.tree import DecisionTreeClassifier
 classifier = DecisionTreeClassifier(criterion = 'entropy', random_state = 0)
@@ -41,13 +36,10 @@ classifier.fit(X_train, y_train)
 
 # Save the model
 filename ='decision_tree_model.pkl'
-joblib.dump(classifier,filename)
+joblib.dump(classifier, filename)
 
 # Predicting the Test set results
-print(X_test)
 y_pred = classifier.predict(X_test)
-print(y_pred)
-print(y_test)
 
 #ACCURACY SCORE
 from sklearn.metrics import accuracy_score
@@ -58,7 +50,6 @@ from sklearn.metrics import classification_report, confusion_matrix
 cm=confusion_matrix(y_test, y_pred)
 
 #Interpretation:
-from sklearn.metrics import classification_report
 print(classification_report(y_test, y_pred))
 
 #ROC
@@ -83,7 +74,6 @@ Newdataset = pd.read_csv('newdata.csv')
 sca=StandardScaler()
 train=sca.fit_transform(train)
 Newdataset=sca.transform(Newdataset)
-print(Newdataset)
 
 ynew=classifier.predict(Newdataset)
 print("---------",ynew,"------------")
