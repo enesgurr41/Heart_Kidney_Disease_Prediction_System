@@ -19,9 +19,14 @@ def user_logout(request):
     logout(request)
     return HttpResponseRedirect(reverse('user_login'))
 
-def diyet(request):
-    return render(request, 'accounts/register.html')
+def recipe(request):
+    return render(request, 'accounts/recipe.html')
 
+def single(request):
+    return render(request, 'accounts/single.html')
+
+def single1(request):
+    return render(request, 'accounts/single1.html')    
 
 def register(request):
 

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="tr">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+		
+		<title>Diyetisyen | Tarifler</title>
+		<!-- Loading third party fonts -->
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|" rel="stylesheet" type="text/css">
+		<link href="{% static 'fonts/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+		<link href="{% static 'fonts/iconmoon.css' %}" rel="stylesheet" type="text/css">
+		<!-- Loading main css file -->
+		<link rel="stylesheet" href="{% static 'css/style_1.css' %}">
+		
+	</head>
+
+
+	<body>
+		
+		<div id="site-content">
+			<header class="site-header">
+				<div class="container">
+					<a href="{% url 'accounts:single' %}" id="branding" class="pull-left">
+						<i class="icon-cupcake logo"></i>
+						<h1 class="site-title">Böbrek Hastalığı Riskinizi Azaltmak İçin Besin Ve Takviyeler</h1>
+					</a>
+					<!-- Default snippet for navigation -->
+					<div class="main-navigation pull-right">
+						<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+						<ul class="menu">
+							<li class="menu-item current-menu-item"><a href="{% url 'accounts:recipe' %}">Ana Sayfa</a></li>
+							<li class="menu-item current-menu-item"><a href="{% url 'user_login'  %}">Giriş Yap</a></li>
+						</ul> <!-- .menu -->
+					</div> <!-- .main-navigation -->
+
+					<div class="mobile-navigation"></div>
+				</div>
+			</header> <!-- .site-header -->
+
+			<main class="main-content">
+				
+				<div class="content">
+					<div class="container">
+						
+						<div class="row">
+							<div class="col-md-4">
+								<figure><img src="{% static 'images/omlet.jpg' %}"></figure>
+							</div>
+							<div class="col-md-7 col-md-offset-1">
+								<h2 class="entry-title">Biberli ve Peynirli Omlet</h2>
+								<div class="recipe-meta">
+									<span class="time"><img src="{% static 'images/icon-time.png' %}"> 10 min</span>
+									<span class="calorie"><img src="{% static 'images/icon-pie-chart.png' %}"> 423 kcal</span>
+								</div>
+								<div class="ingredient">
+									<h3>Malzemeler</h3>
+									<table>
+										<tr>
+											<td><strong>120 g</strong></td> 
+											<td>Krem Edema peyniri (40 % yağ oranı)</td>
+										</tr>
+										<tr>
+											<td><strong>4 Adet</strong></td> 
+											<td>Çırpılmış Yumurta</td>
+										</tr>
+										<tr>
+											<td><strong>40 g</strong></td> 
+											<td>Zeytinyağı</td>
+										</tr>
+										<tr>
+											<td><strong>5 g</strong></td> 
+											<td>Karabiber</td>
+										</tr>
+										<tr>
+											<td><strong>1 Adet</strong></td> 
+											<td>Doğranmış Soğan</td>
+										</tr>
+										<tr>
+											<td><strong>2 Adet</strong></td> 
+											<td>Kavrulmuş Sivri Biber</td>
+										</tr>
+										<tr>
+											<td><strong>250 g</strong></td> 
+											<td>Kızarmış Ekmek</td>
+										</tr>
+									</table>
+								</div>
+								<p>Yapılışı:</p>
+								<p>Zeytinyağını yapışmaz bir tavaya koyup ısıtın. Soğanları yumurtalarla karıştırdıktan sonra tavaya koyun. Baharatları ve biberi ekleyin. Bir kaç dakika pişirdikten sonra omleti ters çevirin. Krem peyniri omletin üzerine yayıp 1 dakika daha pişirin. Omleti ikiye katlayıp hemen servis edin. Yanına kavrulmuş biber ve kızarmış ekmek koyun.</p>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+
+			</main> <!-- .main-content -->
+			
+			<footer class="site-footer">
+				<div class="container">
+					<i class="icon-cupcake logo"></i>
+					<nav class="footer-navigation">
+					</nav>
+					<div class="subscribe">
+					</div>
+					<div class="social-links">
+						<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+						<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+						<a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+					</div>
+					<div class="colophon">
+						<p>Copyright 2024. Designed by Enes Gür. Tüm Hakları Saklıdır</p>
+					</div>
+				</div>
+			</footer>
+
+		</div>
+
+		
+
+		<script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+		<script src="{% static 'js/plugins.js' %}"></script>
+		<script src="{% static 'js/app.js' %}"></script>
+		
+	</body>
+
+</html>

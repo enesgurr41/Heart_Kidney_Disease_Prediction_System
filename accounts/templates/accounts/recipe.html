@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="tr">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+		
+		<title>Diyetisyen | Tarifler</title>
+		<!-- Loading third party fonts -->
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|" rel="stylesheet" type="text/css">
+		<link href="{% static 'fonts/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+		<link href="{% static 'fonts/iconmoon.css' %}" rel="stylesheet" type="text/css">
+		<!-- Loading main css file -->
+		<link rel="stylesheet" href="{% static 'css/style_1.css' %}">
+		
+	</head>
+
+
+	<body>
+		
+		<div id="site-content">
+			<header class="site-header">
+				<div class="container">
+					<a href="{% url 'accounts:recipe' %}" id="branding" class="pull-left">
+						<i class="icon-cupcake logo"></i>
+						<h1 class="site-title">Sağlıklı Besinler Listesi</h1>
+					</a>
+					<!-- Default snippet for navigation -->
+					<div class="main-navigation pull-right">
+						<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+						<ul class="menu">
+							<li class="menu-item current-menu-item"><a href="{% url 'user_login'  %}">Giriş Yap</a></li>
+						</ul> <!-- .menu -->
+					</div> <!-- .main-navigation -->
+
+					<div class="mobile-navigation"></div>
+				</div>
+			</header> <!-- .site-header -->
+
+			<main class="main-content">
+				
+				<div class="content">
+					<div class="container">
+						
+						<h2 class="entry-title">Kronik böbrek hastaları nasıl beslenmelidir?</h2>
+						<p>Böbrekler, su ve minerallerin (sodyum, potasyum ve fosfat) atılımını yeme ve içme alışkanlıklarına göre ayarlayarak su ve tuz dengesini sabit tutar. Vücutta çok fazla sodyum kalırsa, bu dokularda su tutulmasına yol açar. Çok fazla potasyum kardiyak aritmilere yol açabilir. Kronik böbrek hastalığında temel olarak dengeli beslenmeye dikkat edilmelidir. Günlük protein alımı sınırlandırılmalıdır. Potasyum, sodyum ve fosfat içeriği yüksek olan besinlerden kaçınılmalıdır. Bitkisel proteinler, hayvansal proteinlere tercih edilmelidir. </p>
+
+						<h2 class="entry-title">Böbrek yetmezliğinde beslenme nasıl olmalı?</h2>
+						<p>Böbrekler vücudun asit-baz dengesinde rol oynar. Daha az çalışırlarsa, yiyeceklerden gelen asitler daha az elimine edilir. Bu nedenle vücuttaki asit oranını yükselmek yerine alkali bir diyetin benimsenmesi tavsiye edilir. Tuz; ekmek, peynir, konserveler, işlenmiş etler, cipsler, krakerler ve hazır yemeklerde bulunmaktadır. Farkında olmadan yeterince tuz tüketimi yapılmaktadır. Bu sebeple yemeklere ekstra tuz eklenmemedir. Ayrıca fosfor ve potasyumdan zengin besinlerden kaçınmak gerekir.</p>
+
+						<h2 class="entry-title">Yenilmemesi Gereken Yiyecekler Listesi:</h2>
+						<p>✓ Beslenme programında önerilenden fazla süt, yoğurt, et, balık, tavuk, ekmek, sebze ve meyve tüketilmemelidir. <br>
+							✓ İçeriği bilinmeyen çörek, kek, kurabiye, pasta börek, bisküvi, kraker<br>
+							✓ Konserve yiyecekler, turşu, salamura, sucuk, pastırma, salam, sosis, zeytin vb.<br>
+							✓ Kuruyemişler (badem, ceviz, fındık, fıstık vb.<br>
+							✓ Kurutulmuş meyveler (kuru kayısı, kuru erik, pestil vb.).<br>
+							✓ Çikolata, kakao katılmış hazır puding vs, tahin, pekmez, tahin helvası<br>
+							✓ Et suyu ve hazır et suyu tabletler, et suyu ile yapılmış tüm yiyecekler<br>
+							✓ Meşrubatlar (kola, gazoz, hazır meyve suları, sebze suları, kahve, neskafe, boza, maden suyu ve alkollü içecekler)<br>
+							✓ Kepek ve kepek ekmeği. Tam tahıl buğdayı kullanılan unlu gıdalar<br>
+							✓ Bulgur<br>
+							✓ Kuru baklagiller (kuru fasulye, nohut, mercimek vb.)<br>
+							✓ Soya fasulyesi, soya unu<br>
+							✓ Pancar, bakla, pazı, bal kabağı (kış kabağı), enginar, börülce, ebegümeci, brüksel lahanası, karalahana, ıspanak, mantar, kereviz<br>
+							✓ Muz, kavun, kivi, kayısı, avokado, Hindistan cevizi<br>
+							✓ Hazır yiyecekler (hazır çorbalar, hazır tatlılar, mısır gevrekleri (cornflakes vb.), patates ve mısır cipsleri, hazır soslar, hazır köfte, hazır yemek harçları)<br>
+							✓ Ev salçası<br>
+							✓ Sakatatlar (karaciğer, böbrek, beyin, dil, dalak, yürek, işkembe)<br>
+							✓ Yağda kızartılmış, kavrulmuş yiyecekler<br>
+							✓ Tuz ve kabartma tozu eklenmiş tüm besinler</p>
+
+
+						<div class="recipes-list">
+							<article class="recipe">
+								<figure class="recipe-image"><img src="{% static 'images/omlet.jpg' %}"></figure>
+								<div class="recipe-detail">
+									<h2 class="recipe-title"><a href="{% url 'accounts:single' %}">Biberli ve Peynirli Omlet</a></h2>
+									<p>Atıştırmalık, Kahvaltı</p>
+									<div class="recipe-meta">
+										<span class="time"><img src="{% static 'images/icon-time.png' %}"> 10 min</span>
+										<span class="calorie"><img src="{% static 'images/icon-pie-chart.png' %}"> 423 kcal</span>
+									</div>
+								</div>
+							</article>
+							<article class="recipe">
+								<figure class="recipe-image"><img src="{% static 'images/bulgurlu_salata.jpg' %}"></figure>
+								<div class="recipe-detail">
+									<h2 class="recipe-title"><a href="{% url 'accounts:single' %}">Bulgurlu Yaz Salatası</a></h2>
+									<p>Pratik Tarifler, Başlangıçlar & Aperatifler, Atıştırmalık</p>
+									<div class="recipe-meta">
+										<span class="time"><img src="{% static 'images/icon-time.png' %}"> 35 min</span>
+										<span class="calorie"><img src="{% static 'images/icon-pie-chart.png' %}"> 268 kcal</span>
+									</div>
+								</div>
+							</article>
+							<article class="recipe">
+								<figure class="recipe-image"><img src="{% static 'images/somon.jpg' %}"></figure>
+								<div class="recipe-detail">
+									<h2 class="recipe-title"><a href="{% url 'accounts:single1' %}">Baharatlı Somon Fileto ve Sote Roka Salatası</a></h2>
+									<p>Ana yemek</p>
+									<div class="recipe-meta">
+										<span class="time"><img src="{% static 'images/icon-time.png' %}"> 60 min</span>
+										<span class="calorie"><img src="{% static 'images/icon-pie-chart.png' %}"> 470 kcal</span>
+									</div>
+								</div>
+							</article>
+							<article class="recipe">
+								<figure class="recipe-image"><img src="{% static 'images/salata.jpg' %}"></figure>
+								<div class="recipe-detail">
+									<h2 class="recipe-title"><a href="{% url 'accounts:single1' %}">Patates Salatası</a></h2>
+									<p>Pratik Tarifler</p>
+									<div class="recipe-meta">
+										<span class="time"><img src="{% static 'images/icon-time.png' %}"> 120 min</span>
+										<span class="calorie"><img src="{% static 'images/icon-pie-chart.png' %}"> 600 kcal</span>
+									</div>
+								</div>
+							</article>
+							<article class="recipe">
+								<figure class="recipe-image"><img src="{% static 'images/tatlı.jpg' %}"></figure>
+								<div class="recipe-detail">
+									<h2 class="recipe-title"><a href="{% url 'accounts:single' %}">Armutlu Diyet Kek</a></h2>
+									<p>Tatlı</p>
+									<div class="recipe-meta">
+										<span class="time"><img src="{% static 'images/icon-time.png' %}"> 60 min</span>
+										<span class="calorie"><img src="{% static 'images/icon-pie-chart.png' %}"> 228 kcal</span>
+									</div>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+
+			</main> <!-- .main-content -->
+			
+			<footer class="site-footer">
+				<div class="container">
+					<i class="icon-diet logo"></i>
+					<nav class="footer-navigation">
+					</nav>
+					<div class="subscribe">
+						<form action="#">
+							<input type="text" placeholder="Enter your email to join newsletter...">
+							<input type="submit" value="Subscribe">
+						</form>
+					</div>
+					<div class="social-links">
+						<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+						<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+						<a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+					</div>
+					<div class="colophon">
+						<p>Copyright 2024. Designed by Enes Gür. Tüm Hakları Saklıdır</p>
+					</div>
+				</div>
+			</footer>
+
+		</div>
+
+		
+
+		<script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+		<script src="{% static 'js/plugins.js' %}"></script>
+		<script src="{% static 'js/app.js' %}"></script>
+		
+	</body>
+
+</html>

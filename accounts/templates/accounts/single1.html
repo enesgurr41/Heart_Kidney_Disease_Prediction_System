@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="tr">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+		
+		<title>Diyetisyen | Tarifler</title>
+		<!-- Loading third party fonts -->
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|" rel="stylesheet" type="text/css">
+		<link href="{% static 'fonts/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+		<link href="{% static 'fonts/iconmoon.css' %}" rel="stylesheet" type="text/css">
+		<!-- Loading main css file -->
+		<link rel="stylesheet" href="{% static 'css/style_1.css' %}">
+		
+
+	</head>
+
+
+	<body>
+		
+		<div id="site-content">
+			<header class="site-header">
+				<div class="container">
+					<a href="{% url 'accounts:single1' %}" id="branding" class="pull-left">
+						<i class="icon-cupcake logo"></i>
+						<h1 class="site-title">Böbrek Hastalığı Riskinizi Azaltmak İçin Besin Ve Takviyeler</h1>
+					</a>
+					<!-- Default snippet for navigation -->
+					<div class="main-navigation pull-right">
+						<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+						<ul class="menu">
+							<li class="menu-item current-menu-item"><a href="{% url 'accounts:recipe' %}">Ana Sayfa</a></li>
+							<li class="menu-item current-menu-item"><a href="{% url 'user_login'  %}">Giriş Yap</a></li>
+						</ul> <!-- .menu -->
+					</div> <!-- .main-navigation -->
+
+					<div class="mobile-navigation"></div>
+				</div>
+			</header> <!-- .site-header -->
+
+			<main class="main-content">
+				
+				<div class="content">
+					<div class="container">
+						
+						<div class="row">
+							<div class="col-md-4">
+								<figure><img src="{% static 'images/somon.jpg' %}"></figure>
+							</div>
+							<div class="col-md-7 col-md-offset-1">
+								<h2 class="entry-title">Baharatlı Somon Fileto ve Sote Roka Salatası</h2>
+								<div class="recipe-meta">
+									<span class="time"><img src="{% static 'images/icon-time.png' %}"> 60 min</span>
+									<span class="calorie"><img src="{% static 'images/icon-pie-chart.png' %}"> 470 kcal</span>
+								</div>
+								<div class="ingredient">
+									<h3>Malzemeler</h3>
+									<table>
+										<tr>
+											<td><strong>200 g</strong></td> 
+											<td>Somon Fileto</td>
+										</tr>
+										<tr>
+											<td><strong>50 ml</strong></td> 
+											<td>Erimiş Tereyağı</td>
+										</tr>
+										<tr>
+											<td><strong>250 g</strong></td> 
+											<td>Milföy</td>
+										</tr>
+										<tr>
+											<td><strong>İsteğe Bağlı</strong></td> 
+											<td>Kekik, Biberiye, Dereotu, vb.</td>
+										</tr>
+										<tr>
+											<td><strong>70 g</strong></td> 
+											<td>Roka</td>
+										</tr>
+										<tr>
+											<td><strong>20 ml</strong></td> 
+											<td>Balzamik Sirke</td>
+										</tr>
+										<tr>
+											<td><strong>30 ml</strong></td> 
+											<td>sızma zeytinyağı</td>
+										</tr>
+									</table>
+								</div>
+								<p>Yapılışı:</p>
+								<p>Baharatlı somon fileto:<br>
+                                    Somonu yıkayıp, bir süzgeçte fazla suyunu süzün. Milföy hamurları yoğurup 4-5 mm kalınlığında kare şeklinde açın, ortadan ikiye bölün. Balığı dörde bölüp parçaları hamurların üstüne bölüştürün ve üzerlerine fırçayla hafif zeytinyağı sürün. Seçtiğiniz baharatları balıkların üstüne serpin. Balıkları hamur ile kaplayın ve hamurların uçlarına ve üstüne kurumasını engellemek için eritilmiş tereyağı sürün. Tepsiyi pişirme kağıdı ile kaplayın. Yufkalı balık parçalarını kağıda yerleştirip 175°C sıcaklıkta yufkaların üstü kızarıncaya dek yaklaşık 15-20 dakika pişirin.<br><br>
+                                    
+                                    
+                                    Sote Roka Salatası:<br>
+                                    Rokaları yıkayıp suyunu akıtarak iyice kurutun. Zeytinyağını tavada kızdırıp rokayı soteleyin. Lezzet vermek için baharat ekleyin.<br><br>
+                                    
+                                    
+                                    Dijon hardallı sirkeli sos:<br>
+                                    Soğanları soyup ince ince ve küp küp doğrayın. Blender kullanarak balı, sirkeyi ve hardalı karıştırın ve yavaş yavaş yağ ekleyin. Elde edilen sıvı karışıma baharat ekleyin. Ardından doğranmış sarımsak ile küp küp kesilmiş soğanı ekleyip iyice karıştırın.<br><br>
+                                    
+                                    
+                                    Servis ederken:<br>
+                                    Tabağa önce sote roka salatayı koyup üstüne sirkeli sosu gezdirin. Üstüne hamura sarılı somonları yerleştirin. Kokteyl domates ve tere ile süsleyin.</p>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+
+			</main> <!-- .main-content -->
+			
+			<footer class="site-footer">
+				<div class="container">
+					<i class="icon-cupcake logo"></i>
+					<nav class="footer-navigation">
+					</nav>
+					<div class="social-links">
+						<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+						<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+						<a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+					</div>
+					<div class="colophon">
+						<p>Copyright 2024. Designed by Enes Gür. Tüm Hakları Saklıdır</p>
+					</div>
+				</div>
+			</footer>
+
+		</div>
+
+		
+
+		<script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+		<script src="{% static 'js/plugins.js' %}"></script>
+		<script src="{% static 'js/app.js' %}"></script>
+		
+	</body>
+
+</html>
